@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Sign In</h1>
-    <form action="" method="post" novalidate>
+    <h3>Login</h3>
+    <form class="row" action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
-            {{ form.username(size=32) }}
+            {{ form.username(size=32, class="card w-100", placeholder="Enter your username") }}
         </p>
         <p>
             {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
+            {{ form.password(size=32, class="card w-100", placeholder="Enter your password") }}
         </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
+        <p class="row">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <hr class="b-info">
+        <p>{{ form.submit(class="btn info rounded") }}</p>
     </form>
 {% endblock %}

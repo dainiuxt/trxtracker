@@ -4,7 +4,7 @@
 {% block content %}
   {% for exercise in exercises %}
     <div class="card col">
-      <h2>{{ exercise.name }}</h2>
+      <h3>{{ exercise.name }}</h3>
       <p>{{ exercise.description }}</p>
       <img src="{{ url_for('static', filename=exercise.image)}}" alt="{{ exercise.alt }}" class="w-100">
     </div>

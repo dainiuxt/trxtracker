@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ title }}</title>
+    <title>{{ title }} &bull; {{ name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url_for('static', filename='lit.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='util.css')}}">
@@ -13,7 +13,7 @@
   <body class="m0 p0 tc">
 
     <header class="tc bg-info pv1">
-      <h1 class="ph2">{{ title }}</h1>
+      <h2 class="ph2">{{ title }}</h2>
       <div class="row">
         <a class="ph2 black" href="/index">Home</a>
         <a class="ph2 black" href="/login">Login</a>
