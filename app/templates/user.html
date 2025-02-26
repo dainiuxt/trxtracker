@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>User: {{ user.username }}</h3>
+    <hr>
+    {% for workout in workouts %}
+    <header>
+      <h4>{{ workout.name }}</h4>
+    </header>
+    <section>
+      {% for exercise in workout.exercises %}
+      <aside>
+        {{ exercise.name }} </br>
+        {{ exercise.description }} </br>
+        <img src="{{ url_for('static', filename=exercise.image)}}" alt="{{ exercise.alt }}" class="w-100">
+      </aside>
+      {% endfor %}
+    </section>
+    {% endfor %}
+{% endblock %}

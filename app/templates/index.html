@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-<div class="row">
 {% block content %}
+<section>
   {% for exercise in exercises %}
-    <div class="card col">
+    <aside>
       <h3>{{ exercise.name }}</h3>
       <p>{{ exercise.description }}</p>
       <img src="{{ url_for('static', filename=exercise.image)}}" alt="{{ exercise.alt }}" class="w-100">
-    </div>
+    </aside>
   {% endfor %}
   
+</section>
 {% endblock %}
-</div>
